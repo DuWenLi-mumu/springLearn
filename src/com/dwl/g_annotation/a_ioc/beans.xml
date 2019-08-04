@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+    schema命名空间
+    1.命名空间声明
+    默认：xmlns=“” <标签名>  <bean>
+    显示：xmlns：别名=“” <别名：标签名>
+    <context:...>
+
+    2.确定schema xsd 文件位置
+    xsi：schema location “名称 位置 名称2 位置2.。。 内容都是成对的[名称 位置]
+    -->
+
+    <!--
+    <bean id="userServiceId" class="com.dwl.g_annotation.a_ioc.UserServiceImpl"></bean>
+    -->
+
+    <!--组建扫描含有注解的类-->
+    <context:component-scan base-package="com.dwl.g_annotation.a_ioc"></context:component-scan>
+
+</beans>

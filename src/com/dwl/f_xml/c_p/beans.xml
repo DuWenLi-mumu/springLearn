@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="personId" class="com.dwl.f_xml.c_p.Person"
+          p:pname="杜文丽" p:age="21" p:companyAddr-ref="homeAddrId" p:homeAddr-ref="companyAddrId">
+
+    </bean>
+
+    <bean id="homeAddrId" class="com.dwl.f_xml.c_p.Address"
+    p:addr="四川省" p:tel="187">
+
+    </bean>
+    <bean id="companyAddrId" class="com.dwl.f_xml.c_p.Address"
+    p:addr="北京" p:tel="120">
+
+    </bean>
+
+
+
+
+</beans>

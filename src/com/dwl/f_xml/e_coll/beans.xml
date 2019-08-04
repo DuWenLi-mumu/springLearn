@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!--
+   集合的注入 都是给<properties添加字标签
+   数组：<array>
+   List：<List>
+   Set：<Set>
+   Map：<Map>
+   Properties：
+
+   普通数据：<value>
+   引用数据：<ref>
+   -->
+    <bean id="collDataId" class="com.dwl.f_xml.e_coll.CollData">
+        <property name="arrayData" >
+            <array>
+                <value>DS</value>
+                <value>DZD</value>
+                <value>屌丝</value>
+                <value>吊中吊</value>
+            </array>
+        </property>
+        <property name="listData">
+
+            <list>
+                <value>杜文丽1</value>
+                <value>杜文丽2</value>
+                <value>杜文丽3</value>
+                <value>杜文丽4</value>
+            </list>
+        </property>
+
+        <property name="setData">
+
+            <set>
+                <value>李易峰</value>
+                <value>李现</value>
+            </set>
+        </property>
+
+        <property name="mapData">
+
+            <map>
+                <entry key="jack" value="jack value"></entry>
+                <entry key="rose" value="rose value"></entry>
+            </map>
+        </property>
+        <property name="propsData">
+            <props>
+                <prop key="高富帅">嫐</prop>
+                <prop key="男屌丝">挊</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

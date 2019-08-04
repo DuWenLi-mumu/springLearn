@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--模拟spring执行过程
+创建service实例：IOC
+创建dao实例 IOC
+将dao配置给service DI
+
+property 用于进行属性注入
+name bean的属性名 通过setter方法获得
+ref 另一个bean的id值的应用
+-->
+    <!--setter方法注入-->
+    <bean id="personId" class="com.dwl.f_xml.b_setter.Person">
+        <property name="homeAddr" ref="homeAddrId1"></property>
+        <property name="companyAddr" ref="companyAddrId1"></property>
+        <property name="pname" value="jack"></property>
+        <property name="age" value="20"></property>
+    </bean>
+
+    <bean id="homeAddrId1" class="com.dwl.f_xml.b_setter.Address">
+        <property name="addr" value="阜南"></property>
+        <property name="tel" value="123"></property>
+    </bean>
+    <bean id="companyAddrId1" class="com.dwl.f_xml.b_setter.Address">
+        <property name="addr" value="北京八宝山"></property>
+        <property name="tel" value="120"></property>
+    </bean>
+
+
+
+
+</beans>
